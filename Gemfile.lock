@@ -1,0 +1,16 @@
+GEM
+  specs:
+    inquirer (0.2.1)
+      term-ansicolor (>= 1.2.2)
+    term-ansicolor (1.6.0)
+      tins (~> 1.0)
+    tins (1.15.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  inquirer (~> 0.2.1)
+
+BUNDLED WITH
+   1.15.3
