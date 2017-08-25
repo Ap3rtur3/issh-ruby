@@ -106,19 +106,20 @@ module Issh
 
     def interact_add_endpoint
       route = @routes[@current]
-
-      data = route[:items].map do |item|
+      data = {}
+      
+      route[:items].each do |item|
         if item[ITEM_DEFAULT]
           answer = Ask.input item[ITEM_DATA], default: item[ITEM_DEFAULT], response: false
         else
           answer = Ask.input item[ITEM_DATA], response: false
         end
 
-        [item[ITEM_KEY], answer]
-      end.to_h
+        data[item[ITEM_KEY]] = answer
+      end
 
-      # TODO: Validate!!!
-
+      # TODO: Validate?
+      
       puts "Added #{data[:user]}@#{data[:host]}:#{data[:port]} as #{data[:name]}"
 
       action(:add_endpoint, data)

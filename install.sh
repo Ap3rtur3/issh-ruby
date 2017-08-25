@@ -1,5 +1,5 @@
 #!/bin/bash
-set -ex
+#set -ex
 shopt -s expand_aliases
 
 # Dir of this script
