@@ -1,4 +1,5 @@
 GEM
+  remote: https://rubygems.org/
   specs:
     inquirer (0.2.1)
       term-ansicolor (>= 1.2.2)
@@ -10,7 +11,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  inquirer (~> 0.2.1)
+  inquirer
 
 BUNDLED WITH
    1.15.3
