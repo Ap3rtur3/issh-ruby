@@ -8,7 +8,7 @@
 
 ```bash
 git clone https://github.com/Ap3rtur3/issh.git
-echo "issh() ( ruby path/to/issh/lib/issh.rb )" >> $HOME/.bashrc    # Edit repository path accordingly
+echo "issh() { ruby path/to/issh/lib/issh.rb }" >> $HOME/.bashrc    # Edit repository path accordingly
 source $HOME/.bashrc
 cd path/to/issh    # Edit repository path accordingly
 gem install bundler
