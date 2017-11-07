@@ -10,6 +10,7 @@ module Issh
       port: '-p',
       user: '-l',
       identity: '-i',
+      additional: '',
       host: '',
   }
   GREETING = ' === Interactive ssh === '

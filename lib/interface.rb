@@ -37,7 +37,8 @@ module Issh
                   [:host, 'Host'],
                   [:port, 'Port', 22],
                   [:user, 'User'],
-                  [:identity, 'Identity file path ("none" for password auth)', '~/.ssh/id_rsa']
+                  [:identity, 'Identity file path ("none" for password auth)', '~/.ssh/id_rsa'],
+                  [:additional, 'Additional parameters'],
               ],
           },
           remove_endpoint: {
