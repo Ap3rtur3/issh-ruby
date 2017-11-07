@@ -5,7 +5,7 @@ shopt -s expand_aliases
 CUR_DIR=$(pwd)
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 BASHRC=$HOME/.bashrc
-FUNC="issh() { ruby $DIR/lib/issh.rb }"
+FUNC="issh() { (cd $DIR && ruby lib/issh.rb }"
 
 # Add function to .bashrc
 grep -q -F "$FUNC" $BASHRC || echo $FUNC >> $BASHRC
