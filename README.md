@@ -10,10 +10,25 @@ Start, add or remove ssh connections!
 
 ## Installation
 
+Clone this repository
 ```bash
 git clone https://github.com/Ap3rtur3/issh.git
-echo "issh() { (cd path/to/issh && ruby lib/issh.rb) }" >> $HOME/.bashrc    # Edit repository path accordingly
+```
+
+Add this function to your .bashrc (or .zshrc)
+__Edit path/to/issh accordingly!__
+```bash
+issh() { (cd path/to/issh && ruby lib/issh.rb) }
+```
+
+Reload .bashrc (or .zshrc)
+```bash
 source $HOME/.bashrc
+```
+
+Install dependencies
+__Edit path/to/issh accordingly!__
+```bash
 cd path/to/issh    # Edit repository path accordingly
 gem install bundler
 bundle install
