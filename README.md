@@ -40,6 +40,12 @@ Mostly because that's what it is, but I'm also not really creative at naming thi
 
 Go ahead :rocket:
 
+## TODO
+
+* Menu point to edit ssh endpoint
+* Better documentation/comments
+* More ssh config options
+
 ## License
 
 MIT
