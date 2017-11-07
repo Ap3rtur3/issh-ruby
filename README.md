@@ -1,5 +1,9 @@
 # ISSH - A simple ssh cli
 
+Start, add or remove ssh connections!
+
+[![ezgif.com-crop23f56aeb26f8f484.gif](https://gifyu.com/images/ezgif.com-crop23f56aeb26f8f484.gif)](https://gifyu.com/image/MPl6)
+
 ## Prerequisites
 * ruby
 * bash (or compatible)

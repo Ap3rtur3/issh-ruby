@@ -37,7 +37,7 @@ module Issh
                   [:host, 'Host'],
                   [:port, 'Port', 22],
                   [:user, 'User'],
-                  [:identity, 'Identity file path', '~/.ssh/id_rsa']
+                  [:identity, 'Identity file path ("none" for password auth)', '~/.ssh/id_rsa']
               ],
           },
           remove_endpoint: {
@@ -110,9 +110,9 @@ module Issh
       
       route[:items].each do |item|
         if item[ITEM_DEFAULT]
-          answer = Ask.input item[ITEM_DATA], default: item[ITEM_DEFAULT], response: false
+          answer = Ask.input item[ITEM_DATA], default: item[ITEM_DEFAULT]#, response: false
         else
-          answer = Ask.input item[ITEM_DATA], response: false
+          answer = Ask.input item[ITEM_DATA]#, response: false
         end
 
         data[item[ITEM_KEY]] = answer
@@ -120,7 +120,7 @@ module Issh
 
       # TODO: Validate?
       
-      puts "Added #{data[:user]}@#{data[:host]}:#{data[:port]} as #{data[:name]}"
+      puts "> Added #{data[:user]}@#{data[:host]}:#{data[:port]} as #{data[:name]}\n\n"
 
       action(:add_endpoint, data)
     end
@@ -136,6 +136,7 @@ module Issh
       if item[:name] == 'Return'
         route(:index)
       else
+        puts "> Removed #{item[:name]}\n\n"
         action(:remove_endpoint, item)
       end
     end

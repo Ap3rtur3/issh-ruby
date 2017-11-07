@@ -7,10 +7,10 @@ module Issh
   }
   DATAFILE_SAMPLE = JSON.pretty_unparse(DATAFILE_SAMPLE_RAW)
   SSH_ARG_MAP = {
-      host: '',
       port: '-p',
       user: '-l',
-      identity: '-i'
+      identity: '-i',
+      host: '',
   }
   GREETING = ' === Interactive ssh === '
 

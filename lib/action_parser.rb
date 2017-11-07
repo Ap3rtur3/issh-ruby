@@ -40,14 +40,20 @@ module Issh
     def action_start_ssh(payload)
       mapped_args = payload[:data].map do |key, val|
         param = SSH_ARG_MAP[key]
+        # Valid param?
         if param && val.respond_to?(:length) && val.length > 0
-          "#{param} #{val}"
+          # Omit identity file?
+          if key == :identity && val == 'none'
+            ''
+          else
+            "#{param} #{val}"
+          end
         else
           ''
         end
       end
       
-      ssh_args = mapped_args.join(' ')
+      ssh_args = mapped_args.join(' ').strip
       ssh_cmd = "ssh #{ssh_args}"
       puts ssh_cmd
       system(ssh_cmd)
