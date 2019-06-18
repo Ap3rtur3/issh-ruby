@@ -2,7 +2,7 @@
 
 Start, add or remove ssh connections!
 
-[![ezgif.com-crop23f56aeb26f8f484.gif](https://gifyu.com/images/ezgif.com-crop23f56aeb26f8f484.gif)](https://gifyu.com/image/MPl6)
+![demo](https://media.giphy.com/media/l17QAXLpK4CGWFgPHK/giphy.gif)
 
 ## Prerequisites
 * ruby (tested on ruby-2.4.0)
